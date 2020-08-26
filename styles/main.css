@@ -1,3 +1,72 @@
 * {
     box-sizing: border-box;
 }
+
+html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "about"
+        "skills"
+        "projects"
+        "contact"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    background: grey;
+}
+
+header h1 {
+    color: white;
+    font-size: 50px;
+}
+
+#about {
+    grid-area: about;
+    text-align: center;
+    background-color: royalblue;
+}
+
+#skills {
+    grid-area: skills;
+    text-align: center;
+}
+
+#projects {
+    grid-area: projects;
+    text-align: center;
+}
+
+#contact {
+    grid-area: contact;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+ul li a {
+    color: rgb(33, 78, 214);
+}

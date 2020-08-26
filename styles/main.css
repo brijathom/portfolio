@@ -12,9 +12,8 @@ body {
 
 body {
     font-family: "Montserrat", sans-serif;
-
     display: grid;
-    grid-template-rows: repeat(10, max-content);
+    grid-template-rows: repeat(10, auto);
     grid-template-columns: 1fr;
     grid-template-areas:
         "header"
@@ -70,7 +69,9 @@ header h1 {
 
 #skills-content {
     grid-area: skills-content;
-    text-align: center;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #projects-heading {
@@ -82,7 +83,9 @@ header h1 {
 
 #projects-content {
     grid-area: projects-content;
-    text-align: center;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #contact-heading {
@@ -94,11 +97,14 @@ header h1 {
 
 #contact-content {
     grid-area: contact-content;
-    text-align: center;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 16px;
 }
 
 #contact-content a {
-    padding: 0px 5px 0px 5px;
+    padding-right: 20px;
     color: rgb(37, 81, 211);
 }
 
@@ -107,19 +113,12 @@ footer {
     text-align: center;
 }
 
-#contact-content ul {
-    padding: 0;
-}
-#contact-content ul li {
-    list-style-type: none;
-    display: inline;
-}
-
-ul li a {
-    color: rgb(33, 78, 214);
+footer p {
+    margin-block-start: 50px;
 }
 
 h2 {
-    /* margin: 0; */
     color: rgb(33, 78, 214);
+    margin-block-end: 0px;
+    margin-block-start: 40px;
 }

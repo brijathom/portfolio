@@ -14,47 +14,92 @@ body {
     font-family: "Montserrat", sans-serif;
 
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: repeat(10, max-content);
     grid-template-columns: 1fr;
     grid-template-areas:
         "header"
-        "about"
-        "skills"
-        "projects"
-        "contact"
+        "about-heading"
+        "about-content"
+        "skills-heading"
+        "skills-content"
+        "projects-heading"
+        "projects-content"
+        "contact-heading"
+        "contact-content"
         "footer";
 }
 
 header {
     grid-area: header;
     text-align: center;
-    background: grey;
 }
 
 header h1 {
-    color: white;
-    font-size: 50px;
+    font-size: 40px;
+    color: rgb(37, 81, 211);
 }
 
-#about {
-    grid-area: about;
-    text-align: center;
-    background-color: royalblue;
+#about-heading {
+    grid-area: about-heading;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-#skills {
-    grid-area: skills;
+#about-content {
+    grid-area: about-content;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about-content-text {
+    font-size: 24px;
+}
+
+#about-content-text p {
+    margin: 10px 0px 10px 0px;
+}
+
+#skills-heading {
+    grid-area: skills-heading;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#skills-content {
+    grid-area: skills-content;
     text-align: center;
 }
 
-#projects {
-    grid-area: projects;
+#projects-heading {
+    grid-area: projects-heading;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#projects-content {
+    grid-area: projects-content;
     text-align: center;
 }
 
-#contact {
-    grid-area: contact;
+#contact-heading {
+    grid-area: contact-heading;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#contact-content {
+    grid-area: contact-content;
     text-align: center;
+}
+
+#contact-content a {
+    padding: 0px 5px 0px 5px;
+    color: rgb(37, 81, 211);
 }
 
 footer {
@@ -62,11 +107,19 @@ footer {
     text-align: center;
 }
 
-ul li {
+#contact-content ul {
+    padding: 0;
+}
+#contact-content ul li {
     list-style-type: none;
     display: inline;
 }
 
 ul li a {
+    color: rgb(33, 78, 214);
+}
+
+h2 {
+    /* margin: 0; */
     color: rgb(33, 78, 214);
 }

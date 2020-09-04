@@ -37,6 +37,10 @@ body {
         "footer";
 }
 
+#page {
+    height: 100vh;
+}
+
 header {
     grid-area: header;
     padding-left: 10%;

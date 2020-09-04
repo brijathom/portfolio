@@ -15,23 +15,33 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" crossorigin="anonymous" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
         <link rel="stylesheet" href="styles/main.css" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
         <title>Brian Thomas</title>
     </head>
     <body>
-        <header><h1>Brian Thomas</h1></header>
+        <script>
+            AOS.init();
+        </script>
 
-        <div id="about-content">
-            <h2>About Me</h2>
+        <div id="page">
+            <header><h1>Brian Thomas</h1></header>
 
-            <p>I'm currently a student on the MSc in Computer Science (Conversion) course at UCD.</p>
-            <p>If all goes well, I hope to complete my studies in December 2020.</p>
+            <div id="about-content">
+                <h2>About Me</h2>
+
+                <p>I'm currently a student on the MSc in Computer Science (Conversion) course at UCD.</p>
+                <p>If all goes well, I hope to complete my studies in December 2020.</p>
+            </div>
         </div>
 
         <div id="skills-content">
-            <h2>Skills</h2>
+            <h2 data-aos="fade-right">Skills</h2>
 
-            <div id="skills-lists">
+            <div id="skills-lists" data-aos="fade-right">
                 <ul>
                     <li>Python</li>
                     <li>Java</li>
@@ -67,9 +77,9 @@
         </div>
 
         <div id="projects-content">
-            <h2>Projects</h2>
+            <h2 data-aos="fade-right">Projects</h2>
 
-            <div class="project">
+            <div class="project" data-aos="fade-right">
                 <h3>Sudoku:</h3>
 
                 <p>A sudoku game developed with Vue.js.</p>
@@ -78,7 +88,7 @@
                     <a href="https://sudoku-app-bt.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt fa-2x"></i></a>
                 </p>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-right">
                 <h3>To-Do</h3>
                 <p>A to-do list web application created with React.</p>
                 <p>
@@ -86,7 +96,7 @@
                     <a href="https://to-do-app-bt.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt fa-2x"></i></a>
                 </p>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-right">
                 <h3>Blog</h3>
                 <p>A blog utilising Bootrap, Django and mySQL.</p>
                 <p>
@@ -96,7 +106,7 @@
             </div>
         </div>
 
-        <div id="contact-content">
+        <div id="contact-content" data-aos="fade-right">
             <h2>Contact</h2>
             <p>
                 <a href="mailto:brianjamesthomas@live.com"><i class="fab far fa-envelope fa-2x"></i></a>

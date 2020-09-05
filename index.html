@@ -19,6 +19,7 @@
 
         <link rel="stylesheet" href="styles/main.css" />
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="scripts/main.js"></script>
 
         <title>Brian Thomas</title>
     </head>
@@ -28,13 +29,16 @@
         </script>
 
         <div id="page">
-            <header><h1>Brian Thomas</h1></header>
+            <header>
+                <h1>Brian Thomas</h1>
+            </header>
 
             <div id="about-content">
-                <h2>About Me</h2>
+                <h2>About</h2>
 
                 <p>I'm currently a student on the MSc in Computer Science (Conversion) course at UCD.</p>
                 <p>If all goes well, I hope to complete my studies in December 2020.</p>
+                <p>I have really enjoyed the course so far and I hope to continue to improve my skills when I hopefully return to the working world.</p>
             </div>
         </div>
 
@@ -80,7 +84,7 @@
             <h2 data-aos="fade-right">Projects</h2>
 
             <div class="project" data-aos="fade-right">
-                <h3>Sudoku:</h3>
+                <h3>Sudoku</h3>
 
                 <p>A sudoku game developed with Vue.js.</p>
                 <p>
@@ -106,13 +110,20 @@
             </div>
         </div>
 
-        <div id="contact-content" data-aos="fade-right">
-            <h2>Contact</h2>
-            <p>
+        <div id="contact-content">
+            <h2 data-aos="fade-right">Contact</h2>
+            <p data-aos="fade-right">
                 <a href="mailto:brianjamesthomas@live.com"><i class="fab far fa-envelope fa-2x"></i></a>
                 <a href="https://www.linkedin.com/in/brian-thomas-8a4a9b59/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
                 <a href="https://github.com/brijathom" target="_blank"><i class="fab fab fa-github fa-2x"></i></a>
             </p>
+        </div>
+        <div id="theme-content">
+            <h2 data-aos="fade-right">Theme</h2>
+            <div id="theme-select-wrapper" data-aos="fade-right">
+                <div data-mode="light" id="light-mode" class="theme-select" onclick="changeTheme('light');"></div>
+                <div data-mode="dark" id="dark-mode" class="theme-select" onclick="changeTheme('dark');"></div>
+            </div>
         </div>
 
         <footer>

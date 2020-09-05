@@ -108,7 +108,7 @@ body {
 
 #projects-content {
     grid-area: projects-content;
-    padding-top: 140px;
+    padding-top: 40px;
     padding-bottom: 0px;
     padding-left: 10%;
     padding-right: 10%;
@@ -121,7 +121,7 @@ body {
 
 #contact-content {
     grid-area: contact-content;
-    padding-top: 130px;
+    padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 10%;
     padding-right: 10%;
@@ -129,7 +129,7 @@ body {
 
 #theme-content {
     grid-area: theme-content;
-    padding-top: 130px;
+    padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 10%;
     padding-right: 10%;

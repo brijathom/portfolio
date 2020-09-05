@@ -82,7 +82,7 @@ body {
         justify-content: flex-start;
     }
 }
-@media screen and (max-height: 500px) and (max-width: 900px) {
+@media screen and (max-height: 700px) {
     #landing-page {
         justify-content: flex-start;
     }
@@ -93,6 +93,12 @@ body {
 }
 
 @media only screen and (min-height: 3000px) {
+    #landing-page {
+        height: auto;
+    }
+}
+
+@media only screen and (max-height: 440px) {
     #landing-page {
         height: auto;
     }

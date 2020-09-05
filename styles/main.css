@@ -35,7 +35,7 @@ textarea {
 }
 
 body {
-    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1300 - 300)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1300 - 300)));
 }
 
 @media screen and (min-width: 1300px) {
@@ -170,6 +170,16 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
 }
 
 #about-content p {

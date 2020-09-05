@@ -44,16 +44,6 @@ body {
     }
 }
 
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    body {
-        font-size: 15px;
-    }
-
-    #skills-content {
-        padding-top: 120px;
-    }
-}
-
 body {
     overflow-x: hidden;
     min-height: 100%;
@@ -78,7 +68,7 @@ body {
 
 #landing-page {
     grid-area: landing-page;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
@@ -90,6 +80,15 @@ body {
 @media screen and (max-height: 900px) and (max-width: 500px) {
     #landing-page {
         justify-content: flex-start;
+    }
+}
+@media screen and (max-height: 500px) and (max-width: 900px) {
+    #landing-page {
+        justify-content: flex-start;
+    }
+
+    #skills-content {
+        padding-top: 120px;
     }
 }
 
@@ -183,12 +182,19 @@ h2 {
 }
 
 #about-content p {
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
-@media only screen and (max-width: 800px) {
-    #about-content p {
-        font-size: 1em;
+@media screen and (max-height: 500px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+
+    #landing-page h1,
+    h2,
+    p {
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
     }
 }
 

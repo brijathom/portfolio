@@ -1,7 +1,8 @@
 :root {
     --backgroundColor: rgb(255, 255, 255);
-    --mainText: rgb(37, 81, 211);
+    --mainText: rgb(66, 104, 255);
     --secondaryText: rgb(0, 0, 0);
+    --iconBrightness: brightness(130%);
 }
 
 * {
@@ -44,6 +45,16 @@ body {
     }
 }
 
+@media screen and (orientation: landscape) and (max-device-height: 500px) {
+    body {
+        font-size: 15px;
+    }
+
+    #skills-content {
+        padding-top: 120px;
+    }
+}
+
 body {
     overflow-x: hidden;
     min-height: 100%;
@@ -56,11 +67,10 @@ body {
     transition: background-color 0.15s linear;
 
     display: grid;
-    grid-template-rows: repeat(7, auto);
+    grid-template-rows: repeat(6, auto);
     grid-template-columns: 1fr;
     grid-template-areas:
-        "header"
-        "about-content"
+        "landing-page"
         "skills-content"
         "projects-content"
         "contact-content"
@@ -68,41 +78,37 @@ body {
         "footer";
 }
 
-#page {
+#landing-page {
+    grid-area: landing-page;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
 }
 
 @media only screen and (min-height: 1200px) {
-    #page {
+    #landing-page {
         height: auto;
     }
 }
 
-header {
-    grid-area: header;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-#about-content {
-    grid-area: about-content;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
 #skills-content {
     grid-area: skills-content;
-    padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+#skills-content h2 {
+    margin-top: 0px;
 }
 
 #projects-content {
     grid-area: projects-content;
-    padding-top: 30px;
+    padding-top: 140px;
     padding-bottom: 0px;
     padding-left: 10%;
     padding-right: 10%;
@@ -115,7 +121,7 @@ header {
 
 #contact-content {
     grid-area: contact-content;
-    padding-top: 30px;
+    padding-top: 130px;
     padding-bottom: 30px;
     padding-left: 10%;
     padding-right: 10%;
@@ -123,7 +129,7 @@ header {
 
 #theme-content {
     grid-area: theme-content;
-    padding-top: 30px;
+    padding-top: 130px;
     padding-bottom: 30px;
     padding-left: 10%;
     padding-right: 10%;
@@ -135,9 +141,9 @@ a {
 
 i {
     font-size: 32px !important;
-    padding-right: 20px;
+    margin-right: 30px;
     transition: 0.1s linear;
-    filter: brightness(160%);
+    filter: var(--iconBrightness);
 }
 
 i:hover {
@@ -149,11 +155,10 @@ footer {
     grid-area: footer;
     text-align: center;
     margin-top: auto;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 h1 {
-    text-align: center;
     font-size: 2.5em;
     font-weight: 500;
 }
@@ -161,6 +166,16 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: 500;
+}
+
+#about-content p {
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 800px) {
+    #about-content p {
+        font-size: 1em;
+    }
 }
 
 h3 {
@@ -203,7 +218,7 @@ ul {
     height: 30px;
     width: 50px;
     border-radius: 10%;
-    margin: 0px 25px 0px 0px;
+    margin: 0px 30px 0px 0px;
     border: 2px solid rgb(151, 151, 151);
     cursor: pointer;
     transition: 0.1s linear;
@@ -219,7 +234,7 @@ ul {
 }
 
 #dark-mode {
-    background-color: rgb(53, 54, 58);
+    background-color: rgb(33, 33, 33);
 }
 
 :focus {

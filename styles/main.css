@@ -45,7 +45,7 @@ body {
     }
 }
 
-@media screen and (orientation: landscape) and (max-device-height: 500px) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
     body {
         font-size: 15px;
     }

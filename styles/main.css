@@ -14,26 +14,6 @@ html {
     scroll-behavior: smooth;
 }
 
-h1,
-h2,
-i {
-    color: var(--mainText);
-    font-weight: 500;
-}
-
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-span,
-label,
-input,
-textarea {
-    color: var(--secondaryText);
-}
-
 body {
     font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1300 - 300)));
 }
@@ -66,6 +46,12 @@ body {
         "footer";
 }
 
+@media screen and (max-height: 500px) and (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+}
+
 #landing-page {
     grid-area: landing-page;
     padding-top: 20px;
@@ -82,9 +68,10 @@ body {
         justify-content: flex-start;
     }
 }
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 500px) {
     #landing-page {
         justify-content: flex-start;
+        height: auto;
     }
 
     #skills-content {
@@ -93,12 +80,6 @@ body {
 }
 
 @media only screen and (min-height: 3000px) {
-    #landing-page {
-        height: auto;
-    }
-}
-
-@media only screen and (max-height: 440px) {
     #landing-page {
         height: auto;
     }
@@ -113,6 +94,27 @@ body {
 
 #skills-content h2 {
     margin-top: 0px;
+}
+
+#skills-lists {
+    display: grid;
+    grid-gap: 1.5em;
+    max-width: 600px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 700px) {
+    #skills-lists {
+        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #skills-lists {
+        max-width: 200px;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 #projects-content {
@@ -144,20 +146,32 @@ body {
     padding-right: 10%;
 }
 
-a {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+#theme-select-wrapper {
+    display: flex;
+    justify-content: left;
 }
 
-i {
-    font-size: 32px !important;
-    margin-right: 30px;
+.theme-select {
+    height: 30px;
+    width: 50px;
+    border-radius: 10%;
+    margin: 0px 30px 0px 0px;
+    border: 2px solid rgb(151, 151, 151);
+    cursor: pointer;
     transition: 0.1s linear;
-    filter: var(--iconBrightness);
 }
 
-i:hover {
+.theme-select:hover {
+    border-width: 3px;
     transform: scale(1.1);
-    filter: brightness(100%) !important;
+}
+
+#light-theme-select {
+    background-color: rgb(255, 255, 255);
+}
+
+#dark-theme-select {
+    background-color: rgb(33, 33, 33);
 }
 
 footer {
@@ -165,6 +179,26 @@ footer {
     text-align: center;
     margin-top: auto;
     padding-top: 150px;
+}
+
+h1,
+h2,
+i {
+    color: var(--mainText);
+    font-weight: 500;
+}
+
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+label,
+input,
+textarea {
+    color: var(--secondaryText);
 }
 
 h1 {
@@ -187,15 +221,15 @@ h2 {
     }
 }
 
-#about-content p {
+h3 {
+    font-size: 1.3em;
+}
+
+#landing-page p {
     font-size: 1.2em;
 }
 
 @media screen and (max-height: 500px) and (max-width: 900px) {
-    body {
-        font-size: 16px;
-    }
-
     #landing-page h1,
     #landing-page h2,
     #landing-page p {
@@ -204,63 +238,26 @@ h2 {
     }
 }
 
-h3 {
-    font-size: 1.3em;
-}
-
 ul {
     list-style: none;
     padding-left: 0px;
     padding-right: 40px;
 }
 
-#skills-lists {
-    display: grid;
-    grid-gap: 1.5em;
-    max-width: 600px;
-    grid-template-columns: repeat(4, 1fr);
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@media only screen and (max-width: 700px) {
-    #skills-lists {
-        max-width: 400px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    #skills-lists {
-        max-width: 200px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-#theme-select-wrapper {
-    display: flex;
-    justify-content: left;
-}
-
-.theme-select {
-    height: 30px;
-    width: 50px;
-    border-radius: 10%;
-    margin: 0px 30px 0px 0px;
-    border: 2px solid rgb(151, 151, 151);
-    cursor: pointer;
+i {
+    font-size: 32px !important;
+    margin-right: 30px;
     transition: 0.1s linear;
+    filter: var(--iconBrightness);
 }
 
-.theme-select:hover {
-    border-width: 3px;
+i:hover {
     transform: scale(1.1);
-}
-
-#light-mode {
-    background-color: rgb(255, 255, 255);
-}
-
-#dark-mode {
-    background-color: rgb(33, 33, 33);
+    filter: brightness(100%) !important;
 }
 
 :focus {

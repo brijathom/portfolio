@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" crossorigin="anonymous" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <link rel="stylesheet" href="styles/main.css" />
+        <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+        <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="scripts/main.js"></script>
 
@@ -27,19 +29,11 @@
             AOS.init();
         </script>
 
-        <!-- <div id="landing-page"> -->
-        <header>
+        <header id="header">
             <h1>Brian Thomas</h1>
             <p>Computer Science Student</p>
-            <span id="down-arrow">&#10140; </span>
-            <!-- <i class="fab fab fas fa-arrow-down fa-2x"></i> -->
+            <a id="down-arrow-link" href="#about-content"> &#10140; </a>
         </header>
-        <!-- <div id="about-content">
-                <h2>About</h2>
-                <p>I'm currently a student on the MSc in Computer Science (Conversion) course at UCD.</p>
-                <p>If all goes well, I hope to complete my studies in December 2020.</p>
-            </div> -->
-        <!-- </div> -->
 
         <div id="about-content">
             <h2 data-aos="fade-right">About</h2>
@@ -109,7 +103,7 @@
             </div>
             <div class="project" data-aos="fade-right">
                 <h3>Blog</h3>
-                <p>A blog utilising Bootrap, Django and MySQL.</p>
+                <p>A blog utilising Bootstrap, Django and MySQL.</p>
                 <p>
                     <a href="https://github.com/brijathom/blog" target="_blank"><i class="fab fab fa-github fa-2x"></i></a>
                     <a href="https://blog-app-bt.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt fa-2x"></i></a>
@@ -128,12 +122,14 @@
         <div id="theme-content">
             <h2 data-aos="fade-right">Theme</h2>
             <div id="theme-select-wrapper" data-aos="fade-right">
-                <div data-mode="light" id="light-theme-select" class="theme-select" onclick="changeTheme('light');"></div>
-                <div data-mode="dark" id="dark-theme-select" class="theme-select" onclick="changeTheme('dark');"></div>
+                <div id="light-theme-select" class="theme-select" onclick="changeTheme('light');"></div>
+                <div id="dark-theme-select" class="theme-select" onclick="changeTheme('dark');"></div>
             </div>
         </div>
 
         <footer>
+            <a id="up-arrow-link" href="#header"> &#10140; </a>
+
             <p>
                 Brian Thomas |
                 <script>

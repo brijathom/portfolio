@@ -8,7 +8,7 @@ if (theme == null) {
 
 function changeTheme(theme) {
     if (theme === "light") {
-        document.documentElement.style.setProperty("--background", "rgb(255, 255, 255)");
+        document.documentElement.style.setProperty("--background", "rgb(250, 250, 250)");
         document.documentElement.style.setProperty("--secondaryText", "rgb(0, 0, 0)");
     }
 

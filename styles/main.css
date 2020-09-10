@@ -236,33 +236,37 @@ header h1 {
 #return-content {
     grid-area: return-content;
     text-align: center;
-    padding-top: 3em;
-    padding-bottom: 1em;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4em;
+    padding-bottom: 0.5em;
+}
+
+#up-arrow-link {
+    font-size: 80px;
+    transition: 100ms linear;
+    transform: rotate(270deg);
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    display: inline-block;
+    line-height: 1;
+}
+
+@media (hover: hover) {
+    #up-arrow-link:hover {
+        transform: rotate(270deg) scale(1.2);
+        color: var(--iconHover);
+    }
 }
 
 footer {
     grid-area: footer;
     text-align: center;
     margin-top: auto;
-    padding-top: 25px;
     padding-bottom: 0.5em;
-}
-
-#up-arrow-link {
-    font-size: 65px;
-    transform: rotate(270deg);
-    transition: 100ms linear;
-    cursor: pointer;
-    text-decoration: none;
-    user-select: none;
-    display: inline-block;
-}
-
-@media (hover: hover) {
-    #up-arrow-link:hover {
-        transform: rotate(270deg) scale(1.3);
-        color: var(--iconHover);
-    }
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 h1,

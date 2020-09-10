@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    font-size: calc(10px + (24 - 10) * ((100vw - 150px) / (900 - 150)));
+    font-size: calc(12px + (24 - 12) * ((100vw - 150px) / (900 - 150)));
 }
 
 body {
@@ -244,6 +244,12 @@ i {
     }
 }
 
+@media only screen and (max-width: 350px) {
+    header p {
+        font-size: 0.8em;
+    }
+}
+
 @media only screen and (max-width: 300px) {
     #skills-lists {
         max-width: 200px;
@@ -266,10 +272,6 @@ i {
         font-size: 2.5em;
     }
 
-    header p {
-        font-size: 1.1em;
-    }
-
     header .button {
         font-size: 24px;
     }
@@ -282,6 +284,10 @@ i {
 @media screen and (min-width: 600px) {
     header h1 {
         font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.1em;
     }
 
     header .button {

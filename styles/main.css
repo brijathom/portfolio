@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font-size: calc(12px + (24 - 12) * ((100vw - 150px) / (900 - 150)));
+    font-size: calc(14px + (24 - 14) * ((100vw - 150px) / (900 - 150)));
 }
 
 body {
@@ -84,7 +84,6 @@ header .button {
 
 #about-content {
     grid-area: about-content;
-    margin-top: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 10%;

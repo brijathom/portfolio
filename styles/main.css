@@ -31,7 +31,7 @@ body {
     }
 
     header .button {
-        font-size: 1.3em;
+        font-size: 24px;
     }
 
     h2 {
@@ -43,6 +43,10 @@ body {
         font-size: 3em;
     }
     header p {
+        font-size: 1.3em;
+    }
+
+    header .button {
         font-size: 1.3em;
     }
 }
@@ -107,6 +111,7 @@ header .button {
     color: white;
     text-decoration: none;
     background-color: var(--icon);
+    font-size: 18px;
     padding: 0.2em 1em 0.2em 1em;
     border-radius: 5px;
     display: inline-block;

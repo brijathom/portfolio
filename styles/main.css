@@ -1,15 +1,10 @@
 :root {
     --background: rgb(250, 250, 250);
+    --secondaryBackground: rgb(211, 211, 211);
     --mainText: rgb(66, 104, 255);
     --secondaryText: rgb(0, 0, 0);
     --icon: rgb(62, 162, 157);
-    --iconBrightness: brightness(100%);
-}
-
-@media not all and (hover: hover) {
-    :root {
-        --iconBrightness: brightness(100%);
-    }
+    --iconHover: rgb(44, 206, 198);
 }
 
 * {
@@ -23,16 +18,16 @@ html {
 }
 
 body {
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1300 - 300)));
+    font-size: calc(12px + (24- 12) * ((100vw - 150px) / (900 - 150)));
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-weight: 500;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 500;
 }
 
@@ -40,6 +35,22 @@ h3 {
     font-size: 1.3em;
 }
 
+header p {
+    font-size: 0.7em;
+}
+@media screen and (min-width: 370px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
 @media screen and (min-width: 600px) {
     header h1 {
         font-size: 3em;
@@ -48,7 +59,7 @@ h3 {
         font-size: 1.3em;
     }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 900px) {
     body {
         font-size: 24px;
     }
@@ -65,7 +76,7 @@ body {
     background-color: var(--background);
     transition: background-color 150ms linear;
     display: grid;
-    grid-template-rows: repeat(7, auto);
+    grid-template-rows: repeat(8, auto);
     grid-template-columns: 1fr;
     grid-template-areas:
         "header"
@@ -74,6 +85,7 @@ body {
         "projects-content"
         "contact-content"
         "theme-content"
+        "return-content"
         "footer";
 }
 
@@ -86,43 +98,36 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+    background-color: var(--secondaryBackground);
 }
 
+header h1 {
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33em;
+}
 header p {
-    margin-top: 0px;
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33rem;
 }
 
-#down-arrow-link {
-    font-size: 50px;
-    transform: rotate(90deg);
-    transition: 100ms linear;
-    filter: var(--iconBrightness);
-    cursor: pointer;
-    text-decoration: none;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@media (hover: hover) {
-    #down-arrow-link:hover {
-        transform: rotate(90deg) scale(1.3);
-        filter: brightness(100%) !important;
-    }
+header .button {
+    margin-block-start: 1.5em;
+    margin-block-end: 0.33em;
 }
 
 #about-content {
     grid-area: about-content;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 #skills-content {
     grid-area: skills-content;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -150,8 +155,8 @@ header p {
 
 #projects-content {
     grid-area: projects-content;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -166,7 +171,7 @@ header p {
 
 #contact-content {
     grid-area: contact-content;
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
@@ -175,7 +180,7 @@ header p {
 #theme-content {
     grid-area: theme-content;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -192,7 +197,7 @@ header p {
     margin-right: 30px;
     border: 2px solid rgb(151, 151, 151);
     cursor: pointer;
-    transition: 0.1s linear;
+    transition: 100ms linear;
 }
 
 @media (hover: hover) {
@@ -216,19 +221,27 @@ header p {
     background-color: rgb(33, 33, 33);
 }
 
+#return-content {
+    grid-area: return-content;
+    text-align: center;
+    padding-top: 6em;
+    padding-bottom: 2em;
+}
+
 footer {
     grid-area: footer;
     text-align: center;
     margin-top: auto;
-    padding-top: 100px;
+    padding-top: 75px;
     padding-bottom: 0.5em;
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+    background-color: var(--secondaryBackground);
 }
 
 #up-arrow-link {
-    font-size: 50px;
+    font-size: 65px;
     transform: rotate(270deg);
     transition: 100ms linear;
-    filter: var(--iconBrightness);
     cursor: pointer;
     text-decoration: none;
     user-select: none;
@@ -238,7 +251,7 @@ footer {
 @media (hover: hover) {
     #up-arrow-link:hover {
         transform: rotate(270deg) scale(1.3);
-        filter: brightness(100%) !important;
+        color: var(--iconHover);
     }
 }
 
@@ -283,13 +296,12 @@ i {
     font-size: 32px !important;
     margin-right: 30px;
     transition: 50ms linear;
-    filter: var(--iconBrightness);
 }
 
 @media (hover: hover) {
     i:hover {
         transform: scale(1.1);
-        filter: brightness(100%) !important;
+        color: var(--iconHover);
     }
 }
 
@@ -301,4 +313,24 @@ i {
 
 :focus {
     outline: 0 !important;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    background-color: var(--icon);
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 100ms ease 0s;
+}
+
+@media (hover: hover) {
+    .button:hover {
+        background-color: var(--iconHover);
+        color: white;
+        letter-spacing: 1px;
+        box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 100ms ease 0s;
+    }
 }

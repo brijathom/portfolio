@@ -15,7 +15,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" crossorigin="anonymous" />
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
         <link rel="stylesheet" href="styles/main.css" />
         <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
         <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
@@ -27,7 +27,7 @@
         <header id="header">
             <h1>Brian Thomas</h1>
             <p>Computer Science Student at UCD</p>
-            <a id="down-arrow-link" href="#about-content"> &#10140; </a>
+            <a class="button" href="#about-content">About</a>
         </header>
 
         <div id="about-content">
@@ -82,7 +82,7 @@
             <div class="project">
                 <h3>Sudoku</h3>
 
-                <p>A sudoku game developed with Vue.js.</p>
+                <p>A sudoku game developed with Vue.</p>
                 <p>
                     <a href="https://github.com/brijathom/sudoku" target="_blank"><i class="fab fab fa-github fa-2x"></i></a>
                     <a href="https://sudoku-app-bt.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt fa-2x"></i></a>
@@ -90,7 +90,7 @@
             </div>
             <div class="project">
                 <h3>To-Do</h3>
-                <p>A to-do list web application created with React.</p>
+                <p>A to-do list created with React.</p>
                 <p>
                     <a href="https://github.com/brijathom/to-do" target="_blank"><i class="fab fab fa-github fa-2x"></i></a>
                     <a href="https://to-do-app-bt.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt fa-2x"></i></a>
@@ -122,9 +122,11 @@
             </div>
         </div>
 
-        <footer>
+        <div id="return-content">
             <a id="up-arrow-link" href="#header"> &#10140; </a>
+        </div>
 
+        <footer>
             <p>
                 Brian Thomas |
                 <script>

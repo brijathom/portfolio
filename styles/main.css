@@ -118,16 +118,16 @@ header .button {
 
 #about-content {
     grid-area: about-content;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 #skills-content {
     grid-area: skills-content;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -155,8 +155,8 @@ header .button {
 
 #projects-content {
     grid-area: projects-content;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -171,7 +171,7 @@ header .button {
 
 #contact-content {
     grid-area: contact-content;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
@@ -180,7 +180,7 @@ header .button {
 #theme-content {
     grid-area: theme-content;
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     padding-left: 10%;
     padding-right: 10%;
 }

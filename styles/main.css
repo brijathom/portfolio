@@ -98,7 +98,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
     background-color: var(--secondaryBackground);
 }
 

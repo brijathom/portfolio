@@ -3,7 +3,6 @@
     --mainText: rgb(66, 104, 255);
     --secondaryText: rgb(0, 0, 0);
     --icon: rgb(62, 162, 157);
-    --iconHover: rgb(44, 206, 198);
 }
 
 * {
@@ -17,21 +16,16 @@ html {
 }
 
 body {
-    font-size: calc(17px + (24 - 17) * ((100vw - 300px) / (1300 - 300)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1300 - 300)));
 }
 
-header h1 {
-    font-size: 1.8em;
+h1 {
+    font-size: 2.5em;
     font-weight: 500;
 }
 
-header p {
-    font-size: 0.9em;
-    margin-bottom: 0px;
-}
-
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 500;
 }
 
@@ -39,19 +33,7 @@ h3 {
     font-size: 1.3em;
 }
 
-p {
-    font-size: 1em;
-}
-
-@media screen and (min-width: 420px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-    header p {
-        font-size: 1.2em;
-    }
-}
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
     header h1 {
         font-size: 3em;
     }
@@ -59,7 +41,6 @@ p {
         font-size: 1.3em;
     }
 }
-
 @media screen and (min-width: 1300px) {
     body {
         font-size: 24px;
@@ -101,31 +82,20 @@ header {
     height: 100vh;
 }
 
-header h1 {
-    margin-bottom: 0px;
+header p {
+    margin-top: 0px;
 }
 
 .button {
     color: white;
     text-decoration: none;
     background-color: var(--icon);
-    font-size: 1.3em;
+    font-size: 18px;
     padding: 0.2em 1em 0.2em 1em;
-    margin-top: 1.3em;
     border-radius: 5px;
     display: inline-block;
-    transition: all 100ms ease 0ms;
+    transition: all 100ms ease 0s;
     user-select: none;
-}
-
-@media (hover: hover) {
-    .button:hover {
-        background-color: var(--iconHover);
-        color: white;
-        letter-spacing: 1px;
-        box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-        transition: all 100ms ease 0s;
-    }
 }
 
 #about-content {
@@ -232,7 +202,6 @@ header h1 {
 #dark-theme-select {
     background-color: rgb(33, 33, 33);
 }
-
 #return-content {
     grid-area: return-content;
     text-align: center;
@@ -244,7 +213,7 @@ footer {
     grid-area: footer;
     text-align: center;
     margin-top: auto;
-    padding-top: 25px;
+    padding-top: 100px;
     padding-bottom: 0.5em;
 }
 
@@ -261,7 +230,6 @@ footer {
 @media (hover: hover) {
     #up-arrow-link:hover {
         transform: rotate(270deg) scale(1.3);
-        color: var(--iconHover);
     }
 }
 
@@ -308,16 +276,10 @@ i {
     transition: 50ms linear;
 }
 
-i {
-    font-size: 32px !important;
-    margin-right: 30px;
-    transition: 50ms linear;
-}
-
 @media (hover: hover) {
     i:hover {
         transform: scale(1.1);
-        color: var(--iconHover);
+        filter: brightness(100%) !important;
     }
 }
 

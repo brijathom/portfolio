@@ -236,8 +236,8 @@ header h1 {
 #return-content {
     grid-area: return-content;
     text-align: center;
-    padding-top: 6em;
-    padding-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 1em;
 }
 
 footer {

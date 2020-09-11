@@ -19,3 +19,7 @@ function changeTheme(theme) {
 
     localStorage.setItem("theme", theme);
 }
+
+window.onresize = function () {
+    document.body.height = window.innerHeight;
+};

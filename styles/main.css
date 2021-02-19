@@ -104,7 +104,7 @@ a {
 i {
     font-size: 32px !important;
     margin-right: 30px;
-    transition: 50ms linear;
+    transition: 10ms linear;
 }
 
 @media (hover: hover) {
@@ -143,6 +143,7 @@ header h1 {
 
 header p {
     font-size: 0.9rem;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 

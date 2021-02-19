@@ -13,8 +13,6 @@
 html {
     height: 100%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
-    --scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     font-size: calc(17px + (24 - 17) * (100vw - 300px) / (1300 - 300));
 }

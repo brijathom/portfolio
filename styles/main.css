@@ -301,3 +301,46 @@ footer {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+/* .theme-select {
+    height: 30px;
+    width: 50px;
+    border-radius: 10%;
+    margin-right: 30px;
+    border: 2px solid rgb(151, 151, 151);
+    cursor: pointer;
+    transition: 100ms linear;
+}
+
+@media (hover: hover) {
+    .theme-select:hover {
+        border-width: 3px;
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 270px) {
+    .theme-select {
+        margin-right: 5px;
+    }
+}
+
+#light-theme-select {
+    background-color: rgb(250, 250, 250);
+}
+
+#dark-theme-select {
+    background-color: rgb(33, 33, 33);
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 6rem;
+    padding-bottom: 0.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+ */

@@ -19,7 +19,6 @@ html {
     font-size: calc(17px + (24 - 17) * (100vw - 300px) / (1300 - 300));
 }
 
-/*  */
 body {
     overflow-x: hidden;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -210,7 +209,7 @@ header p {
     display: grid;
     max-width: 800px;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 0.5;
 }
 
 @media only screen and (max-width: 900px) {
@@ -225,7 +224,7 @@ header p {
     #skills-lists {
         max-width: 400px;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 0.5rem;
+        grid-gap: 1rem;
     }
 }
 

@@ -209,14 +209,22 @@ header p {
     display: grid;
     max-width: 800px;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5;
+    grid-gap: 0.5rem;
 }
 
 @media only screen and (max-width: 900px) {
     #skills-lists {
-        max-width: 600px;
+        max-width: 100%;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #skills-lists {
+        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
     }
 }
 

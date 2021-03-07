@@ -1,3 +1,4 @@
+/* The values for the root CSS variables are set. */
 :root {
     --background: rgb(250, 250, 250);
     --mainText: rgb(66, 104, 255);
@@ -10,21 +11,23 @@
     box-sizing: border-box;
 }
 
+/* Font size is made responsive to the width of the page using the formula shown */
 html {
-    height: 100%;
     overflow-x: hidden;
+    height: 100vh;
     -webkit-text-size-adjust: 100%;
     font-size: calc(17px + (24 - 17) * (100vw - 300px) / (1300 - 300));
 }
 
+/*  */
 body {
     overflow-x: hidden;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    text-align: left;
     min-height: 100%;
     width: 100%;
     margin: 0;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     line-height: 1.7;
-    text-align: left;
     background-color: var(--background);
     transition: background-color 150ms linear;
     display: grid;
@@ -124,13 +127,13 @@ i {
 
 header {
     grid-area: header;
-    padding-left: 10%;
-    padding-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 header h1 {
@@ -205,15 +208,24 @@ header p {
 
 #skills-lists {
     display: grid;
-    grid-gap: 1rem;
     max-width: 800px;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
 }
 
 @media only screen and (max-width: 900px) {
     #skills-lists {
+        max-width: 600px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #skills-lists {
         max-width: 400px;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5rem;
     }
 }
 
@@ -221,6 +233,7 @@ header p {
     #skills-lists {
         max-width: 200px;
         grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
     }
 }
 
@@ -301,46 +314,3 @@ footer {
     padding-left: 10%;
     padding-right: 10%;
 }
-
-/* .theme-select {
-    height: 30px;
-    width: 50px;
-    border-radius: 10%;
-    margin-right: 30px;
-    border: 2px solid rgb(151, 151, 151);
-    cursor: pointer;
-    transition: 100ms linear;
-}
-
-@media (hover: hover) {
-    .theme-select:hover {
-        border-width: 3px;
-        transform: scale(1.1);
-    }
-}
-
-@media only screen and (max-width: 270px) {
-    .theme-select {
-        margin-right: 5px;
-    }
-}
-
-#light-theme-select {
-    background-color: rgb(250, 250, 250);
-}
-
-#dark-theme-select {
-    background-color: rgb(33, 33, 33);
-}
-
-footer {
-    grid-area: footer;
-    text-align: center;
-    margin-top: auto;
-    padding-top: 6rem;
-    padding-bottom: 0.5rem;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
- */

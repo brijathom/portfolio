@@ -13,15 +13,13 @@
 
 /* Font size is made responsive to the width of the page using the formula shown */
 html {
-    overflow-x: hidden;
-    height: 100vh;
+    height: 100%;
     -webkit-text-size-adjust: 100%;
     font-size: calc(17px + (24 - 17) * (100vw - 300px) / (1300 - 300));
 }
 
 /* The pages is structured using CSS grid. */
 body {
-    overflow-x: hidden;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     text-align: left;
     height: 100%;

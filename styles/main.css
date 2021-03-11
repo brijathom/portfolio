@@ -18,7 +18,7 @@ html {
     font-size: calc(17px + (24 - 17) * (100vw - 300px) / (1300 - 300));
 }
 
-/* The pages is structured using CSS grid. */
+/* The page is structured using CSS grid. */
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     text-align: left;
@@ -197,7 +197,8 @@ header p {
     padding-right: 10%;
 }
 
-/* The skills lists are structured using CSS grid. */
+/* The skills lists are structured using CSS grid.
+As a default, the skills lists have a four columns by one row structure */
 #skills-lists {
     display: grid;
     max-width: 900px;
@@ -205,6 +206,7 @@ header p {
     grid-gap: 1rem;
 }
 
+/* When the screen width is at 700px and below the skills lists will change to a two columns by two rows structure. */
 @media only screen and (max-width: 700px) {
     #skills-lists {
         max-width: 400px;
@@ -212,6 +214,7 @@ header p {
     }
 }
 
+/* When the screen width is at 360px and below the skills lists will change to a one column by four rows structure. */
 @media only screen and (max-width: 360px) {
     #skills-lists {
         max-width: 200px;

@@ -16,6 +16,5 @@ function changeTheme(theme) {
         document.documentElement.style.setProperty("--background", "rgb(33 33 33)");
         document.documentElement.style.setProperty("--secondaryText", "rgb(255, 255, 255)");
     }
-
     localStorage.setItem("theme", theme);
 }

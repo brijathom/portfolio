@@ -278,7 +278,9 @@ As a default, the skills lists have a four columns by one row structure */
 
 @media only screen and (max-width: 270px) {
     .theme-select {
-        margin-right: 5px;
+        height: 20px;
+        width: 33px;
+        margin-right: 10px;
     }
 }
 

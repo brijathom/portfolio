@@ -301,3 +301,107 @@ footer {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+/* The skills lists are structured using CSS grid.
+As a default, the skills lists have a four columns by one row structure */
+#skills-lists {
+    display: grid;
+    max-width: 900px;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1rem;
+}
+
+/* When the screen width is at 700px and below the skills lists will change to a two columns by two rows structure. */
+@media only screen and (max-width: 700px) {
+    #skills-lists {
+        max-width: 400px;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+/* When the screen width is at 360px and below the skills lists will change to a one column by four rows structure. */
+@media only screen and (max-width: 360px) {
+    #skills-lists {
+        max-width: 200px;
+        grid-template-columns: repeat(1, auto);
+    }
+}
+
+#projects-content {
+    grid-area: projects-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.project {
+    margin-bottom: 80px;
+}
+
+.project:last-child {
+    margin-bottom: 0px;
+}
+
+#contact-content {
+    grid-area: contact-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#theme-content {
+    grid-area: theme-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#theme-select-wrapper {
+    display: flex;
+    justify-content: left;
+}
+
+.theme-select {
+    height: 30px;
+    width: 50px;
+    border-radius: 10%;
+    margin-right: 30px;
+    border: 2px solid rgb(151, 151, 151);
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+@media (hover: hover) {
+    .theme-select:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 270px) {
+    .theme-select {
+        height: 20px;
+        width: 33px;
+        margin-right: 10px;
+    }
+}
+
+#light-theme-select {
+    background-color: rgb(250, 250, 250);
+}
+
+#dark-theme-select {
+    background-color: rgb(33, 33, 33);
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 6rem;
+    padding-bottom: 0.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
